@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rmaf0\\OneDrive - SESISENAISP - Escolas\\Documentos\\Ricardo_Moura\\ExoApi\\ExoApi.csproj": {}
+    "C:\\Users\\ead\\OneDrive - SESISENAISP - Escolas\\Documentos\\Ricardo_Moura\\ExoApi\\ExoApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rmaf0\\OneDrive - SESISENAISP - Escolas\\Documentos\\Ricardo_Moura\\ExoApi\\ExoApi.csproj": {
+    "C:\\Users\\ead\\OneDrive - SESISENAISP - Escolas\\Documentos\\Ricardo_Moura\\ExoApi\\ExoApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rmaf0\\OneDrive - SESISENAISP - Escolas\\Documentos\\Ricardo_Moura\\ExoApi\\ExoApi.csproj",
+        "projectUniqueName": "C:\\Users\\ead\\OneDrive - SESISENAISP - Escolas\\Documentos\\Ricardo_Moura\\ExoApi\\ExoApi.csproj",
         "projectName": "ExoApi",
-        "projectPath": "C:\\Users\\rmaf0\\OneDrive - SESISENAISP - Escolas\\Documentos\\Ricardo_Moura\\ExoApi\\ExoApi.csproj",
-        "packagesPath": "C:\\Users\\rmaf0\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rmaf0\\OneDrive - SESISENAISP - Escolas\\Documentos\\Ricardo_Moura\\ExoApi\\obj\\",
+        "projectPath": "C:\\Users\\ead\\OneDrive - SESISENAISP - Escolas\\Documentos\\Ricardo_Moura\\ExoApi\\ExoApi.csproj",
+        "packagesPath": "C:\\Users\\ead\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ead\\OneDrive - SESISENAISP - Escolas\\Documentos\\Ricardo_Moura\\ExoApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rmaf0\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ead\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"

@@ -18,5 +18,36 @@ namespace ExoApi.Repositories
         {
             return _context.Projetos.ToList();
         }
+
+        public void Cadastrar (Projeto projeto)
+        {
+            _context.Projetos.Add (projeto);
+            _context.SaveChanges();
+        }
+        public Projeto BuscarPorId (int id)
+        {
+            return _context.Projetos.Find(id)!;
+        }
+
+        public void Atualizar (int id, Projeto proj)
+        {
+            Projeto projBuscado = _context.Projetos.Find(id)!;
+
+            if(projBuscado == null)
+            {
+            projBuscado.NomeDoProjeto = proj.NomeDoProjeto;
+            projBuscado.Area = proj.Area;
+            projBuscado.Status = proj.Status;
+            }
+            _context.Projetos.Update(projBuscado);
+            _context.SaveChanges();
+        }
+
+        public void Deletar (int id)
+        {
+            Projeto? projetoBuscado = _context.Projetos.Find(id);
+            _context.Projetos.Remove(projetoBuscado);
+            _context.SaveChanges();
+        }
     }
 }
