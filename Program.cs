@@ -1,4 +1,5 @@
 using ExoApi.Contexts;
+using ExoApi.Models;
 using ExoApi.Repositories;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,6 +13,8 @@ builder.Services.AddDbContext<ExoContext>(options =>
 builder.Services.AddControllers();
 
 builder.Services.AddScoped<ProjetoRepository>();
+
+builder.Services.AddTransient<UsuarioRepository, UsuarioRepository>();
 
 var app = builder.Build();
 

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ExoApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37a37b69dc8349b61a92d5d7e1146140df6f958b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c2de962791b4f0a9cfd4bad66d288b8f2f245bd")]
 [assembly: System.Reflection.AssemblyProductAttribute("ExoApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ExoApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
