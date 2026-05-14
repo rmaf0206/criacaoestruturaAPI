@@ -12,7 +12,7 @@ builder.Services.AddDbContext<ExoContext>(options =>
 
 builder.Services.AddControllers();
 
-builder.Services.AddScoped<ProjetoRepository>();
+builder.Services.AddTransient<ProjetoRepository, ProjetoRepository>();
 
 builder.Services.AddTransient<UsuarioRepository, UsuarioRepository>();
 

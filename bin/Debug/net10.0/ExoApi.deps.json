@@ -9,6 +9,7 @@
       "ExoApi/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": "10.0.5",
+          "Microsoft.EntityFrameworkCore": "9.0.16",
           "Microsoft.EntityFrameworkCore.Design": "9.0.16",
           "Pomelo.EntityFrameworkCore.MySql": "9.0.0"
         },

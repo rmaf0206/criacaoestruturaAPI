@@ -30,9 +30,9 @@ namespace ExoApi.Controllers
             return StatusCode (201);
         }
         [HttpGet("{id}")]
-        public IActionResult BuscarPorId(int id)
+        public IActionResult BuscaPorId(int id)
         {
-            Usuario usuario = _usuarioRepository.BuscarPorId(id);
+            Usuario usuario = _usuarioRepository.BuscaPorId(id);
             if (usuario == null)
             {
                 return NotFound();
@@ -44,6 +44,19 @@ namespace ExoApi.Controllers
         {
             _usuarioRepository.Atualizar(id, usuario);
             return StatusCode(204);
+        }
+        [HttpDelete("{id}")]
+        public IActionResult Deletar (int id)
+        {
+            try
+            {
+                _usuarioRepository.Deletar(id);
+                return StatusCode (204);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
         }
     }
 }
