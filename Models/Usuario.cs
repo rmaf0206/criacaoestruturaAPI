@@ -11,7 +11,7 @@ namespace ExoApi.Models
     public class Usuario
     {
         [Key]
-        [Column("cd_usuario")]
+        [Column("cd_usuarios")]
 
         public int Id { get; set; }
         [Column ("ds_email")]

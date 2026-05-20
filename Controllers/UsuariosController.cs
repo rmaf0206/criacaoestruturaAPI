@@ -5,6 +5,10 @@ using System.Threading.Tasks;
 using ExoApi.Models;
 using ExoApi.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace ExoApi.Controllers
 {
@@ -57,6 +61,31 @@ namespace ExoApi.Controllers
             {
                 return BadRequest();
             }
+        }
+        [HttpPost("login")]
+        public IActionResult Login (Usuario usuario)
+        {
+            Usuario usuarioBuscado = _usuarioRepository.Login(usuario.Email, usuario.Senha);
+
+            if (usuarioBuscado == null)
+            {
+                return NotFound(new { mensagem = "E-mail ou senha inválidos"});
+            }
+            var claims = new[]
+            {
+                new Claim(JwtRegisteredClaimNames.Email, usuarioBuscado.Email),
+                new Claim(JwtRegisteredClaimNames.Jti, usuarioBuscado.Id.ToString()),
+            };
+            var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("exoapi-chave-autenticacao-senai-123"));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+            var token = new JwtSecurityToken(
+                issuer: "exoapi.webapi",
+                audience: "exoapi.webapi",
+                claims: claims,
+                expires: DateTime.Now.AddMinutes(30),
+                signingCredentials: creds
+            );
+            return Ok(new { token = new JwtSecurityTokenHandler().WriteToken(token) });
         }
     }
 }

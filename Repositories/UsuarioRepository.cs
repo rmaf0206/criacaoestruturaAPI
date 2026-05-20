@@ -47,5 +47,10 @@ namespace ExoApi.Repositories
         {
             return _context.Usuarios.Find(id);
         }
+
+        public Usuario Login(string email, string senha)
+        {
+            return _context.Usuarios.FirstOrDefault(u => u.Email == email && u.Senha == senha);
+        }
     }
 }
